@@ -1,0 +1,114 @@
+<mvc:View
+    controllerName="noman.resume.controller.Skills"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core">
+    
+    <f:DynamicPage id="skillsPage" toggleHeaderOnTitleClick="false">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="Skills &amp; Competencies" level="H2"/>
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        
+        <f:content>
+            <VBox class="sapUiSmallMargin">
+                <!-- Technology Icons Section -->
+                <Panel class="sapUiNoContentPadding">
+                    <HBox justifyContent="SpaceBetween" wrap="Wrap" class="sapUiMediumMarginBottom techIconsContainer">
+                        <Image 
+                            src="Images/sap.png" 
+                            width="80px"
+                            height="80px"
+                            decorative="false"
+                            tooltip="SAP ABAP"
+                            class="techIcon"/>
+                        <Image 
+                            src="Images/abap_cloud.png" 
+                            width="80px"
+                            height="80px"
+                            decorative="false"
+                            tooltip="ABAP Cloud"
+                            class="techIcon"/>
+                        <Image 
+                            src="Images/eclipse.png" 
+                            width="80px"
+                            height="80px"
+                            decorative="false"
+                            tooltip="Eclipse"
+                            class="techIcon"/>
+                        <Image 
+                            src="Images/ui5.png" 
+                            width="80px"
+                            height="80px"
+                            decorative="false"
+                            tooltip="UI5"
+                            class="techIcon"/>
+                        <Image 
+                            src="Images/vscode.png" 
+                            width="80px"
+                            height="80px"
+                            decorative="false"
+                            tooltip="Visual Studio Code"
+                            class="techIcon"/>               
+                        <Image 
+                            src="Images/bas.png" 
+                            width="80px"
+                            height="80px"
+                            decorative="false"
+                            tooltip="SAP Business Application Studio"
+                            class="techIcon"/>
+                        <!--<Image 
+                            src="Images/btp.png" 
+                            width="80px"
+                            height="80px"
+                            decorative="false"
+                            tooltip="SAP BTP"
+                            class="techIcon"/>-->
+                        <Image 
+                            src="Images/git.png" 
+                            width="80px"
+                            height="80px"
+                            decorative="false"
+                            tooltip="Git"
+                            class="techIcon"/>
+                    </HBox>
+                </Panel>
+                
+                <Panel expandable="true" expanded="true" headerText="Core Competencies">
+                    <List
+                        items="{resume>/skills/coreCompetencies}"
+                        showSeparators="None" class="sapUiMediumMarginBegin">
+                        <CustomListItem>
+                            <HBox>
+                                <core:Icon src="sap-icon://bullet-text" class="sapUiSmallMarginEnd"/>
+                                <Text text="{resume>}" wrapping="true"/>
+                            </HBox>
+                        </CustomListItem>
+                    </List>
+                </Panel>
+                
+                <Panel expandable="true" expanded="true" headerText="Technical Skills">
+                    <layout:Grid defaultSpan="XL3 L4 M6 S12" class="sapUiSmallMarginTop">
+                        <layout:content>
+                            <List
+                                items="{resume>/skills/technicalSkills}"
+                                showSeparators="None">
+                                <CustomListItem>
+                                    <HBox>
+                                        <core:Icon src="sap-icon://technical-object" class="sapUiSmallMarginEnd"/>
+                                        <Text text="{resume>}" wrapping="true"/>
+                                    </HBox>
+                                </CustomListItem>
+                            </List>
+                        </layout:content>
+                    </layout:Grid>
+                </Panel>
+            </VBox>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

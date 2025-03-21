@@ -1,0 +1,132 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+        "id": "noman.resume",
+        "type": "application",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "i18n": "i18n/i18n.properties"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "noman.resume.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "app"
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "dependencies": {
+            "minUI5Version": "1.60.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ui.layout": {},
+                "sap.f": {},
+                "sap.uxap": {}
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "noman.resume.i18n.i18n",
+                    "supportedLocales": ["en", "de"],
+                    "fallbackLocale": "en"
+                }
+            },
+            "resume": {
+                "type": "sap.ui.model.json.JSONModel",
+                "preload": true
+            },
+            "device": {
+                "type": "sap.ui.model.json.JSONModel",
+                "settings": {
+                    "isTouch": true,
+                    "isNoTouch": false,
+                    "isPhone": false,
+                    "isTablet": false,
+                    "isDesktop": true
+                }
+            }
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "noman.resume.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "transition": "slide",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "summary",
+                    "target": "summary"
+                },
+                {
+                    "pattern": "experience",
+                    "name": "experience",
+                    "target": "experience"
+                },
+                {
+                    "pattern": "skills",
+                    "name": "skills",
+                    "target": "skills"
+                },
+                {
+                    "pattern": "education",
+                    "name": "education",
+                    "target": "education"
+                },
+                {
+                    "pattern": "certifications",
+                    "name": "certifications",
+                    "target": "certifications"
+                }
+            ],
+            "targets": {
+                "summary": {
+                    "viewId": "summary",
+                    "viewName": "Summary",
+                    "viewLevel": 1
+                },
+                "experience": {
+                    "viewId": "experience",
+                    "viewName": "Experience",
+                    "viewLevel": 1
+                },
+                "skills": {
+                    "viewId": "skills",
+                    "viewName": "Skills",
+                    "viewLevel": 1
+                },
+                "education": {
+                    "viewId": "education",
+                    "viewName": "Education",
+                    "viewLevel": 1
+                },
+                "certifications": {
+                    "viewId": "certifications",
+                    "viewName": "Certifications",
+                    "viewLevel": 1
+                }
+            }
+        }
+    }
+}

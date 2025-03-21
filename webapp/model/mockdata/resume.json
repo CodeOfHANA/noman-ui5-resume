@@ -1,0 +1,358 @@
+{
+    "personalInfo": {
+        "name": "NOMAN MOHAMED HANIF",
+        "title": {
+            "en": "Result driven technocrat, targeting challenging assignments in the SAP development space",
+            "de": "Ergebnisorientierter Technokrat, der anspruchsvolle Aufgaben im SAP-Entwicklungsbereich anstrebt"
+        },
+        "email": "noman.hanif@relacon.de.",
+        "linkedin": "linkedin.com/in/noman-mohamed-hanif-9b280b1a",
+        "location": "Hamburg, Germany",
+        "phone": "+49 521 329 36 711"
+    },
+    "about_me": {
+        "en": "I am an **SAP Technical Consultant** with over **9 years of experience**, transitioning from a **core ABAP developer in ECC** to working extensively in **SAP S/4HANA, OData, Fiori, RAP, and Adobe Forms**. My journey began with **RICEFW development**, where I specialized in **custom reports, interfaces, conversions, enhancements, and forms**. \n\nAs SAP evolved, I expanded my expertise into **CDS views and OData services**, playing a key role in **S/4HANA projects** and backend optimizations. I also gained **in-depth experience in Adobe Forms development**, working on complex form layouts, scripting, and dynamic content generation for business documents. \n\nLater, I delved into **Fiori Elements-based applications**, where I created apps with SAP standard floorplans and also gained experience in **enhancements for standard Fiori apps using BAS Adaptation Projects (ADP)**. Additionally, I gained hands-on experience in **UI5/Fiori freestyle development**, building custom front-end applications. \n\nCurrently, I am **actively exploring, learning, and applying RAP (ABAP RESTful Application Programming Model)** to modernize business applications with clean architecture, enhanced performance, and Fiori integration. Alongside this, I am also **exploring SAP Build** to leverage low-code/no-code solutions for process automation. \n\nPassionate about **modernizing SAP solutions**, I focus on **performance optimization, clean coding practices, and seamless UI/UX integration**. As a testament to my technical skills, this resume was **self-created using the UI5 framework**, showcasing my ability to develop and structure modern applications. \n\nOpen to networking and knowledge sharing - let's connect and explore opportunities in SAP development!",
+        "de": "Ich bin ein **SAP Technical Consultant** mit über **9 Jahren Erfahrung** und habe mich vom **ABAP-Kernentwickler in ECC** zu einer umfassenden Tätigkeit in **SAP S/4HANA, OData, Fiori, RAP und Adobe Forms** entwickelt. Meine Reise begann mit der **RICEFW-Entwicklung**, wo ich mich auf **benutzerdefinierte Berichte, Schnittstellen, Konvertierungen, Erweiterungen und Formulare** spezialisierte. \n\nMit der Evolution von SAP erweiterte ich meine Expertise auf **CDS-Views und OData-Services** und spielte eine Schlüsselrolle bei **S/4HANA-Projekten** und Backend-Optimierungen. Ich gewann auch **vertiefte Erfahrung in der Adobe Forms-Entwicklung** und arbeitete an komplexen Formular-Layouts, Scripting und dynamischer Inhaltsgenerierung für Geschäftsdokumente. \n\nSpäter beschäftigte ich mich intensiv mit **Fiori Elements-basierten Anwendungen**, entwickelte Apps mit SAP-Standardfloorplans und gewann Erfahrung in **Erweiterungen für Standard-Fiori-Apps mit BAS Adaptation Projects (ADP)**. Zusätzlich sammelte ich praktische Erfahrung in der **UI5/Fiori-Freestyle-Entwicklung** und baute benutzerdefinierte Frontend-Anwendungen. \n\nGegenwärtig **erkunde, lerne und wende ich aktiv RAP (ABAP RESTful Application Programming Model)** an, um Geschäftsanwendungen mit sauberer Architektur, verbesserter Leistung und Fiori-Integration zu modernisieren. Daneben **erkunde ich auch SAP Build**, um Low-Code/No-Code-Lösungen für die Prozessautomatisierung zu nutzen. \n\nMit Leidenschaft für die **Modernisierung von SAP-Lösungen** konzentriere ich mich auf **Leistungsoptimierung, saubere Codierungspraktiken und nahtlose UI/UX-Integration**. Als Beweis für meine technischen Fähigkeiten wurde dieser Lebenslauf **selbst mit dem UI5-Framework erstellt** und zeigt meine Fähigkeit, moderne Anwendungen zu entwickeln und zu strukturieren. \n\nOffen für Networking und Wissensaustausch - lassen Sie uns in Verbindung treten und Möglichkeiten im SAP-Entwicklungsbereich erkunden!"
+    },
+  
+    "summary": {
+        "en": [
+            "SAP Consultant with 9+ years of experience in SAP ABAP on HANA, working at Relacon IT Consulting GmbH since January 2024.",
+            "SAP Certified ABAP on HANA and SAP Certified Sourcing & Procurement.",
+            "Expertise in SAP HANA Application Development, ERP Data Migration, and ABAP on HANA.",
+            "Strong experience in SAP OData services development and Fiori/UI5 application integration.",
+            "Skilled in Fiori Elements-based application development and standard Fiori app enhancements using BAS.",
+            "Experienced in Enhancing Standard Fiori Apps using BAS Adaptation Editor.",
+            "Proficient in OO ABAP, ALV Reporting, Adobe Forms, Enhancement Framework, and modern ABAP syntax (7.5+).",
+            "Hands-on experience with Eclipse ADT for S/4HANA developments (RICEF).",
+            "Experienced with Business Application Studio (BAS) and FLP Designer for configuring standard and custom Fiori apps.",
+            "Working experience with Git and version management using GitHub and Azure DevOps.",
+            "Involved in ERP implementation, requirement gathering, enhancements, maintenance, and support projects.",
+            "Experienced in Agile methodologies, business process mapping, system testing, and project management.",
+            "Strong analytical, leadership, problem-solving, and decision-making skills."
+        ],
+        "de": [
+            "SAP-Berater mit mehr als 9 Jahren Erfahrung in SAP ABAP on HANA, tätig bei Relacon IT Consulting GmbH seit Januar 2024.",
+            "SAP-zertifiziert für ABAP on HANA und SAP-zertifiziert für Sourcing & Procurement.",
+            "Expertise in SAP HANA-Anwendungsentwicklung, ERP-Datenmigration und ABAP on HANA.",
+            "Umfangreiche Erfahrung in der Entwicklung von SAP OData-Services und der Integration von Fiori/UI5-Anwendungen.",
+            "Kompetent in der Entwicklung von Fiori Elements-basierten Anwendungen und Erweiterungen von Standard-Fiori-Apps mit BAS.",
+            "Erfahren in der Erweiterung von Standard-Fiori-Apps mit dem BAS Adaptation Editor.",
+            "Versiert in OO ABAP, ALV-Reporting, Adobe Forms, Enhancement Framework und moderner ABAP-Syntax (7.5+).",
+            "Praktische Erfahrung mit Eclipse ADT für S/4HANA-Entwicklungen (RICEF).",
+            "Erfahren mit Business Application Studio (BAS) und FLP Designer für die Konfiguration von Standard- und benutzerdefinierten Fiori-Apps.",
+            "Arbeitserfahrung mit Git und Versionsverwaltung mit GitHub und Azure DevOps.",
+            "Beteiligt an ERP-Implementierung, Anforderungserhebung, Erweiterungen, Wartung und Support-Projekten.",
+            "Erfahren in agilen Methoden, Business Process Mapping, Systemtests und Projektmanagement.",
+            "Starke analytische, Führungs-, Problemlösungs- und Entscheidungsfähigkeiten."
+        ]
+    },
+    "experience": [
+        {
+            "role": {
+                "en": "Senior Technology Consultant",
+                "de": "Senior Technologie Berater"
+            },
+            "company": "Relacon IT Consulting GmbH",
+            "key": "relacon",
+            "period": "2024-01 - present",
+            "location": "Hamburg, Germany",
+            "projects": [
+                {
+                    "client": "tesa SE (tpO, ISPo Projects - S4 Brownfield)",
+                    "responsibilities": {
+                        "en": [
+                            "Working on ABAP on HANA, OData services, and Fiori/UI5 developments.",
+                            "Development of Fiori Elements-based applications.",
+                            "Enhancing Standard Fiori Apps using BAS Adaptation Editor.",
+                            "Configuring standard and custom Fiori apps in FLP Designer.",
+                            "Version control and collaboration using GitHub and Azure DevOps.",
+                            "Analyzing business requirements and providing technical solutions.",
+                            "Development of custom reports, enhancements, and Adobe Forms."
+                        ],
+                        "de": [
+                            "Arbeiten an ABAP on HANA, OData-Services und Fiori/UI5-Entwicklungen.",
+                            "Entwicklung von Fiori Elements-basierten Anwendungen.",
+                            "Erweiterung von Standard-Fiori-Apps mit dem BAS Adaptation Editor.",
+                            "Konfiguration von Standard- und benutzerdefinierten Fiori-Apps im FLP Designer.",
+                            "Versionskontrolle und Zusammenarbeit mit GitHub und Azure DevOps.",
+                            "Analyse von Geschäftsanforderungen und Bereitstellung technischer Lösungen.",
+                            "Entwicklung von benutzerdefinierten Berichten, Erweiterungen und Adobe Forms."
+                        ]
+                    }
+                },
+                {
+                    "client": "Teckentrup Door Solutions (Project Demands)",
+                    "responsibilities": {
+                        "en": [
+                            "Requirement analysis and feasibility check.",
+                            "Development of custom reports, enhancements, and Adobe Forms."
+                        ],
+                        "de": [
+                            "Anforderungsanalyse und Machbarkeitsprüfung.",
+                            "Entwicklung von benutzerdefinierten Berichten, Erweiterungen und Adobe Forms."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "role": {
+                "en": "Senior Specialist : SAP Cross Applications",
+                "de": "Senior Spezialist : SAP Cross Applications"
+            },
+            "company": "q.beyond AG",
+            "key": "qbeyond",
+            "period": "2022-04 - 2023-12",
+            "location": "Hamburg, Germany",
+            "projects": [
+                {
+                    "client": "PARI GmbH (EUDAMED Fiori App & Services)",
+                    "responsibilities": {
+                        "en": [
+                            "Designed custom data models and schemas for UDI device data in SAP.",
+                            "Developed OData/JSON services and integrated with custom UI5 apps.",
+                            "Coordinated with cross-functional teams for XML and XSD generation."
+                        ],
+                        "de": [
+                            "Entwurf benutzerdefinierter Datenmodelle und Schemata für UDI-Gerätedaten in SAP.",
+                            "Entwicklung von OData/JSON-Services und Integration mit benutzerdefinierten UI5-Apps.",
+                            "Koordination mit funktionsübergreifenden Teams für XML- und XSD-Generierung."
+                        ]
+                    }
+                },
+                {
+                    "client": "tesa SE (tpHH/teVC - S/4HANA Brownfield Implementation)",
+                    "responsibilities": {
+                        "en": [
+                            "Delivered technical solutions across QM, MM, SD, EH&S, FI, and Logistics.",
+                            "Developed Adobe Forms, Reports, and Enhancements.",
+                            "Ensured ATC-compliant developments with a focus on performance optimization and adherence to best coding practices."
+                        ],
+                        "de": [
+                            "Lieferung technischer Lösungen für QM, MM, SD, EH&S, FI und Logistik.",
+                            "Entwicklung von Adobe Forms, Berichten und Erweiterungen.",
+                            "Sicherstellung ATC-konformer Entwicklungen mit Fokus auf Leistungsoptimierung und Einhaltung bewährter Codierungspraktiken."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "role": {
+                "en": "Advisory Consultant",
+                "de": "Beratender Consultant"
+            },
+            "company": "IBM India Pvt.",
+            "key": "ibm",
+            "period": "2021-04 - 2022-03",
+            "location": "Bengaluru, India",
+            "projects": [
+                {
+                    "client": "Mercedes-Benz Research & Development India (MIA Platform & Service Delivery)",
+                    "responsibilities": {
+                        "en": [
+                            "Developed and optimized OData services for UI5 apps.",
+                            "Created data migration solutions and backend integrations.",
+                            "Worked on performance tuning and code standardization."
+                        ],
+                        "de": [
+                            "Entwicklung und Optimierung von OData-Services für UI5-Apps.",
+                            "Erstellung von Datenmigrationslösungen und Backend-Integrationen.",
+                            "Arbeit an Leistungsoptimierung und Code-Standardisierung."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "role": {
+                "en": "SAP Technical & Data Migration Consultant",
+                "de": "SAP Technical & Datenmigrations Consultant"
+            },
+            "company": "Toyota Kirloskar Motor Pvt. Ltd",
+            "key": "toyota",
+            "period": "2018-10 - 2021-03",
+            "location": "Bengaluru, India",
+            "projects": [
+                {
+                    "client": "SHIFT (Phase I & II S4 Greenfield implementation)",
+                    "responsibilities": {
+                        "en": [
+                            "Worked on SAP S/4 HANA implementation as Data Migration and Technical (ABAP) Consultant.",
+                            "Led the Data Migration team for Master & Transactional data migration from legacy ERP Oracle EBS to S4 HANA.",
+                            "Implementation for digital signature functionality for Adobe forms.",
+                            "Worked on BAPI wrappers, Idocs, and CDS views.",
+                            "Coordinated and developed data migration strategies using SAP Migration Cockpit.",
+                            "Assist in the planning, design, development, and deployment of new applications and enhancements to existing applications."
+                        ],
+                        "de": [
+                            "Arbeit an der SAP S/4 HANA-Implementierung als Datenmigrations- und technischer (ABAP) Berater.",
+                            "Leitung des Datenmigrationsteams für die Migration von Stamm- und Transaktionsdaten vom Legacy-ERP Oracle EBS zu S4 HANA.",
+                            "Implementierung der digitalen Signaturfunktionalität für Adobe Forms.",
+                            "Arbeit an BAPI-Wrappern, IDoc's und CDS-Views.",
+                            "Koordination und Entwicklung von Datenmigrationsstrategien mit dem SAP Migration Cockpit.",
+                            "Unterstützung bei der Planung, dem Design, der Entwicklung und dem Deployment neuer Anwendungen und Erweiterungen bestehender Anwendungen."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "role": {
+                "en": "SAP Development Consultant",
+                "de": "SAP Entwicklungs Consultant"
+            },
+            "company": "Accenture Solutions India Pvt. Ltd",
+            "key": "accenture",
+            "period": "2015-11 - 2018-10",
+            "location": "Bengaluru, India",
+            "projects": [
+                {
+                    "client": "Royal Dutch Shell (R & M, Projects & Demands)",
+                    "responsibilities": {
+                        "en": [
+                            "Handle Change requests - Effectively handling new change requests (CRs) development and testing of solutions.",
+                            "Developed custom reports, forms (SAPScripts, SmartForms), and enhancements.",
+                            "Developed and implemented SAP reports/programs (Classical/Interactive/ALV) in SD, MM and FICO modules using OOPS concepts.",
+                            "Developed objects in different areas of SAP like Data Dictionary, ALV-Reports, Classical Reports, etc.",
+                            "Worked on various performance tuning techniques including the use of Parallel Processing and Secondary indexes to improve the response time and run-time complexity of complex reports.",
+                            "Worked on Application/Presentation server File Handling.",
+                            "Worked on custom workflows to analyze issues and troubleshoot the root cause.",
+                            "Implemented a business transaction event (BTE) to disable the posting of FI documents from standard transactions",
+                            "Implemented GCC VAT, NFe Brazil, and Onesource Indirect Taxes integration.",
+                            "Worked on SAP Release Management & Interface Monitoring.",
+                            "Worked immensely on FI validations and Substitutions."
+                        ],
+                        "de": [
+                            "Bearbeitung von Änderungsanträgen - Effektive Bearbeitung neuer Änderungsanträge (CRs), Entwicklung und Testen von Lösungen.",
+                            "Entwicklung benutzerdefinierter Berichte, Formulare (SAPScripts, SmartForms) und Erweiterungen.",
+                            "Entwicklung und Implementierung von SAP-Berichten/Programmen (Klassisch/Interaktiv/ALV) in SD-, MM- und FICO-Modulen unter Verwendung von OOPS-Konzepten.",
+                            "Entwicklung von Objekten in verschiedenen SAP-Bereichen wie Data Dictionary, ALV-Berichte, klassische Berichte usw.",
+                            "Arbeit an verschiedenen Performance-Tuning-Techniken, einschließlich der Verwendung von Parallel Processing und sekundären Indizes zur Verbesserung der Antwortzeit und Laufzeitkomplexität komplexer Berichte.",
+                            "Arbeit an der Dateiverarbeitung auf Anwendungs-/Präsentationsserver.",
+                            "Arbeit an benutzerdefinierten Workflows zur Analyse von Problemen und zur Fehlersuche der Grundursache.",
+                            "Implementierung eines Business Transaction Event (BTE) zur Deaktivierung der Buchung von FI-Dokumenten aus Standardtransaktionen.",
+                            "Implementierung von GCC VAT, NFe Brazil und Onesource Indirect Taxes Integration.",
+                            "Arbeit am SAP Release Management & Interface Monitoring.",
+                            "Umfangreiche Arbeit an FI-Validierungen und Substitutionen."
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "education": [
+        {
+            "key": "mit",
+            "degree": {
+                "en": "Master of Computer Applications (M.C.A.)",
+                "de": "Master of Computer Applications (M.C.A.)"
+            },
+            "institution": "Manipal Institute of Technology",
+            "year": "2013 - 2015",
+            "location": "Udupi, Karnataka, India "
+        },
+        {
+            "key": "smc",
+            "degree": {
+                "en": "Bachelor of Computer Applications (B.C.A.)",
+                "de": "Bachelor of Computer Applications (B.C.A.)"
+            },
+            "institution": "St. Mary's College",
+            "year": "2010 - 2013",
+            "location": "Udupi, Karnataka, India "
+        },
+        {
+            "key": "iisr",
+            "degree": {
+                "en": "Higher Secondary Education",
+                "de": "Höhere Sekundarbildung"
+            },
+            "institution": "International Indian School",
+            "year": "2010",
+            "location": "Riyadh, Saudi Arabia"
+        }
+    ],
+    "skills": {
+        "coreCompetencies": {
+            "en": [
+                "SAP ABAP Development",
+                "OData Services & Fiori/UI5 Integration",
+                "Fiori Elements & BAS Customization",
+                "FLP Designer Configuration",
+                "Standard Fiori App Enhancements",
+                "Version Control (Git, GitHub, Azure DevOps)",
+                "ERP Implementation & Migration",
+                "Requirement Gathering & Support",
+                "Project Execution & Testing"
+            ],
+            "de": [
+                "SAP ABAP-Entwicklung",
+                "OData-Services & Fiori/UI5-Integration",
+                "Fiori Elements & BAS-Anpassung",
+                "FLP Designer-Konfiguration",
+                "Standard-Fiori-App-Erweiterungen",
+                "Versionskontrolle (Git, GitHub, Azure DevOps)",
+                "ERP-Implementierung & Migration",
+                "Anforderungserfassung & Support",
+                "Projektdurchführung & Testen"
+            ]
+        },
+        "technicalSkills": {
+            "en": [
+                "ABAP on HANA",
+                "OData & RESTful APIs",
+                "CDS Views",
+                "Adobe Forms",
+                "UI5/Fiori Development",
+                "Fiori Elements",
+                "BAS & Adaptation Editor",
+                "FLP Designer",
+                "Performance Optimization",
+                "Git & Version Management"
+            ],
+            "de": [
+                "ABAP on HANA",
+                "OData & RESTful APIs",
+                "CDS-Views",
+                "Adobe Forms",
+                "UI5/Fiori-Entwicklung",
+                "Fiori Elements",
+                "BAS & Adaptation Editor",
+                "FLP Designer",
+                "Leistungsoptimierung",
+                "Git & Versionsverwaltung"
+            ]
+        }
+    },
+    "certifications": [
+        {
+            "name": {
+                "en": "SAP Certified ABAP on HANA",
+                "de": "SAP Certified ABAP on HANA"
+            },
+            "logo": "sap.png",
+            "issueDate": "2021",
+            "link": "https://www.credly.com/badges/5387f05b-1c54-4225-bf06-088e68de7d3e/linked_in_profile"
+        },
+        {
+            "name": {
+                "en": "SAP Certified Sourcing & Procurement",
+                "de": "SAP Certified Sourcing & Procurement"
+            },
+            "logo": "sap.png",
+            "issueDate": "2020",
+            "link": "https://www.credly.com/badges/3ca1605c-a198-4ae7-a499-afcc792135fa/linked_in_profile"
+        },
+        {
+            "name": {
+                "en": "SAP Ui5 - Professional Development",
+                "de": "SAP Ui5 - Professionelle Entwicklung"
+            },
+            "logo": "udemy_logo.png",
+            "issueDate": "2021",
+            "link": "https://ude.my/UC-6108c608-2b12-4dca-954e-61952eea5d49"
+        }
+    ]
+  }

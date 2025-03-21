@@ -1,0 +1,84 @@
+<mvc:View
+    controllerName="noman.resume.controller.Experience"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core">
+    
+    <f:DynamicPage id="experiencePage" toggleHeaderOnTitleClick="false">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="Professional Experience" level="H2"/>
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        
+        <f:content>
+            <VBox class="sapUiMediumMargin">
+                <List
+                    items="{resume>/experience}"
+                    showSeparators="None">
+                    <CustomListItem class="sapUiMediumMarginBottom">
+                        <Panel expandable="true" expanded="false" class="linkedInStyle">
+                            <headerToolbar>
+                                <OverflowToolbar height="auto" style="Clear">
+                                    <HBox alignItems="Start" justifyContent="SpaceBetween" width="100%" wrap="Wrap">
+                                        <HBox alignItems="Start">
+                                            <f:Avatar
+                                                src="Images/{resume>key}.jpg"
+                                                displayShape="Square"
+                                                displaySize="M"
+                                                class="sapUiSmallMarginEnd"/>
+                                            <VBox class="sapUiSmallMarginBegin" width="100%">
+                                                <Title text="{resume>role}" level="H3" wrapping="true"/>
+                                                <ObjectStatus 
+                                                    title="{resume>company}"
+                                                    text="{resume>period}"
+                                                    class="sapUiTinyMarginTop"/>
+                                                <Label text="{resume>location}" class="sapUiTinyMarginTop"/>
+                                            </VBox>
+                                        </HBox>
+                                    </HBox>
+                                </OverflowToolbar>
+                            </headerToolbar>
+                            <content>
+                                <!-- Projects Header -->
+                                <Title text="Projects" level="H3" class="sapUiMediumMarginBegin"/>
+
+                                <List
+                                    items="{resume>projects}"
+                                    showSeparators="Inner"
+                                    class="sapUiTinyMarginTop">
+                                    <CustomListItem>
+                                        <Panel expandable="true" expanded="false" class="subPanel">
+                                            <headerToolbar>
+                                                <Toolbar style="Clear">
+                                                    <Title text="{resume>client}" level="H4" wrapping="true"/>
+                                                </Toolbar>
+                                            </headerToolbar>
+                                            <content>
+                                                <List
+                                                    items="{resume>responsibilities}"
+                                                    showSeparators="None"
+                                                    class="sapUiSmallMarginTop">
+                                                    <CustomListItem>
+                                                        <HBox alignItems="Start" class="sapUiTinyMarginBottom">
+                                                            <core:Icon src="sap-icon://bullet-text" class="sapUiTinyMarginEnd sapUiTinyMarginTop"/>
+                                                            <Text text="{resume>}" wrapping="true"/>
+                                                        </HBox>
+                                                    </CustomListItem>
+                                                </List>
+                                            </content>
+                                        </Panel>
+                                    </CustomListItem>
+                                </List>
+                            </content>
+                        </Panel>
+                    </CustomListItem>
+                </List>
+            </VBox>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

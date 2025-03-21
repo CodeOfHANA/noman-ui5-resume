@@ -1,0 +1,76 @@
+<mvc:View
+    controllerName="noman.resume.controller.Certifications"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core">
+    
+    <f:DynamicPage id="certificationsPage" toggleHeaderOnTitleClick="false">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="Professional Certifications" level="H2"/>
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        
+        <f:content>
+            <VBox class="sapUiSmallMargin">
+                <Text text="These certifications validate my expertise in SAP technologies and methodologies. Click on a certification to view the credential." class="sapUiSmallMarginBottom"/>
+                
+                <FlexBox
+                    wrap="Wrap"
+                    justifyContent="SpaceAround"
+                    items="{resume>/certifications}">
+                    <GenericTile
+                        class="sapUiMediumMargin"
+                        header="{resume>name}"
+                        subheader="{= 'Issued: ' + ${resume>issueDate} || ''}"
+                        frameType="OneByOne"
+                        press=".onCertificatePress">
+                        <customData>
+                            <core:CustomData key="link" value="{resume>link}" />
+                        </customData>
+                        <TileContent>
+                            <ImageContent
+                                src="Images/{resume>logo}"
+                                description="SAP Certified Professional"/>
+                        </TileContent>
+                    </GenericTile>
+                </FlexBox>
+                
+                <Title text="Certification Details" level="H3" class="sapUiSmallMarginTop sapUiSmallMarginBottom"/>
+                <List
+                    items="{resume>/certifications}"
+                    showSeparators="Inner"
+                    class="sapUiMediumMarginBottom">
+                    <CustomListItem press=".onCertificatePress" type="Active">
+                        <customData>
+                            <core:CustomData key="link" value="{resume>link}" />
+                        </customData>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBegin sapUiSmallMarginEnd sapUiSmallMarginTop sapUiSmallMarginBottom">
+                            <Image 
+                                src="Images/{resume>logo}" 
+                                width="4rem"
+                                height="3rem"
+                                class="sapUiMediumMarginEnd"/>
+                            <VBox>
+                                <Title text="{resume>name}" level="H4" class="sapUiTinyMarginBottom"/>
+                                <HBox>
+                                    <core:Icon src="sap-icon://calendar" class="sapUiTinyMarginEnd"/>
+                                    <Text text="{= 'Issued: ' + ${resume>issueDate} || 'Current'}" class="sapUiTinyMarginEnd"/>
+                                </HBox>
+                                <Link 
+                                    text="View Certificate" 
+                                    href="{resume>link}" 
+                                    target="_blank" 
+                                    class="sapUiTinyMarginTop"/>
+                            </VBox>
+                        </HBox>
+                    </CustomListItem>
+                </List>
+            </VBox>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

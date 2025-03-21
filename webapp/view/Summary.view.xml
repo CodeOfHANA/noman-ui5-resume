@@ -1,0 +1,100 @@
+<mvc:View
+    controllerName="noman.resume.controller.Summary"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core">
+    
+    <f:DynamicPage id="summaryPage" toggleHeaderOnTitleClick="false">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="{i18n>summaryTitle}" level="H2"/>
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        
+        <f:content>
+            <VBox class="sapUiSmallMargin">
+                <!-- Top section with profile image and personal details -->
+                <HBox justifyContent="SpaceBetween" class="sapUiSmallMarginBottom">
+                    <!-- Left side: Profile image and name -->
+                    <VBox alignItems="Center" class="sapUiSmallMarginEnd" width="50%">
+                        <f:Avatar
+                            src="Images/profile.jpg"
+                            displaySize="XL"
+                            initials="NMH"
+                            imageFitType="Cover"
+                            showBorder="true"
+                            class="sapUiMediumMarginBottom"/>
+                        <Title text="{resume>/personalInfo/name}" level="H3" class="sapUiTinyMarginBottom"/>
+                    </VBox>
+                    
+                    <!-- Right side: Contact details -->
+                    <VBox width="50%" class="sapUiSmallMarginBegin">
+                        <Title text="{i18n>contactInfo}" level="H3" class="sapUiSmallMarginBottom"/>
+                        
+                        <HBox alignItems="Center" class="sapUiTinyMarginBottom">
+                            <core:Icon src="sap-icon://email" class="sapUiTinyMarginEnd"/>
+                            <Link text="{resume>/personalInfo/email}" href="mailto:{resume>/personalInfo/email}"/>
+                        </HBox>
+                        
+                        <HBox alignItems="Center" class="sapUiTinyMarginBottom">
+                            <core:Icon src="sap-icon://chain-link" class="sapUiTinyMarginEnd"/>
+                            <Link text="{resume>/personalInfo/linkedin}" href="https://{resume>/personalInfo/linkedin}" target="_blank"/>
+                        </HBox>
+                        
+                        <HBox alignItems="Center" class="sapUiTinyMarginBottom">
+                            <core:Icon src="sap-icon://map" class="sapUiTinyMarginEnd"/>
+                            <Text text="{resume>/personalInfo/location}"/>
+                        </HBox>
+                        
+                        <HBox alignItems="Center" class="sapUiTinyMarginBottom">
+                            <core:Icon src="sap-icon://phone" class="sapUiTinyMarginEnd"/>
+                            <Link text="{resume>/personalInfo/phone}" href="tel:{resume>/personalInfo/phone}"/>
+                        </HBox>
+                    </VBox>
+                </HBox>
+                
+                <!-- Separator line -->
+                <Bar class="sapUiTinyMarginBottom">
+                    <contentMiddle>
+                        <Label text=""/>
+                    </contentMiddle>
+                </Bar>
+                
+                <!-- Professional information -->
+                <VBox width="100%" alignItems="Start">
+                    <HBox alignItems="Center" class="sapUiTinyMarginBottom">
+                        <core:Icon src="sap-icon://customer" class="sapUiTinyMarginEnd"/> 
+                        <Title text="{i18n>aboutMe}" level="H3"/>
+                    </HBox>  
+                    <FormattedText 
+                            htmlText="{
+                                        path: 'resume>/about_me',
+                                        formatter: '.formatBoldText'
+                                    }"
+                            class="sapUiSmallMarginBottom sapUiMediumMarginBegin"
+                            width="100%"/>
+                    
+                    <HBox alignItems="Center" class="sapUiTinyMarginBottom">
+                        <core:Icon src="sap-icon://form" class="sapUiTinyMarginEnd"/> 
+                        <Title text="{i18n>professionalSummary}" level="H3"/>
+                    </HBox>
+                    <List
+                        items="{resume>/summary}"
+                        showSeparators="Inner"
+                        class="sapUiTinyMarginBegin">
+                        <CustomListItem>
+                            <HBox>
+                                <core:Icon src="sap-icon://bullet-text" class="sapUiSmallMarginEnd"/>
+                                <Text text="{resume>}" wrapping="true"/>
+                            </HBox>
+                        </CustomListItem>
+                    </List>
+                </VBox>
+            </VBox>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>
