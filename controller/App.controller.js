@@ -112,7 +112,18 @@ sap.ui.define([
         },
         
         _handleDownload: function() {
-            // Handle resume download
+            // Instead of showing a message, we'll now trigger a file download
+            var sResumeUrl = "docs/noman_resume.docx";
+            
+            // Create a hidden link element and trigger the download
+            var link = document.createElement('a');
+            link.href = sResumeUrl;
+            link.download = "Noman_Hanif_Resume.docx"; // Name that will appear when downloading
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Show a success message
             var sMessage = this.getView().getModel("i18n").getResourceBundle().getText("downloadMessage");
             sap.m.MessageToast.show(sMessage);
         },
