@@ -6,7 +6,7 @@ This is an interactive, responsive resume application built using SAP UI5 framew
 ![Resume Screenshot](Images/screenshot.png)
 
 ## Live Demo
-Experience the interactive resume: [https://nomanmohamedhanif.github.io/ui5-resume/](https://nomanmohamedhanif.github.io/ui5-resume/)
+Experience the interactive resume: [https://codeofhana.github.io/noman-ui5-resume/](https://codeofhana.github.io/noman-ui5-resume/)
 
 ## Features
 
@@ -98,5 +98,5 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Feel free to contact me for any questions or improvement suggestions:
 
-- Email: noman.mohamedhanif@yahoo.com
+- Email: noman.hanif@relacon.de
 - LinkedIn: [noman-mohamed-hanif-9b280b1a](https://linkedin.com/in/noman-mohamed-hanif-9b280b1a)
