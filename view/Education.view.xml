@@ -10,41 +10,46 @@
         <f:title>
             <f:DynamicPageTitle>
                 <f:heading>
-                    <Title text="Education" level="H2"/>
+                    <Title text="{i18n>educationTitle}" level="H2"/>
                 </f:heading>
             </f:DynamicPageTitle>
         </f:title>
         
         <f:content>
-            <VBox class="sapUiSmallMargin">
+            <VBox class="sapUiSmallMargin educationContainer">
                 <List
                     items="{resume>/education}"
-                    showSeparators="Inner">
-                    <CustomListItem>
-                        <HBox alignItems="Start" class="sapUiTinyMarginTop sapUiTinyMarginBottom">
-                            <!-- College Logo Image -->
-                            <f:Avatar
-                                src="Images/{resume>key}.jpg"
-                                displayShape="Square"
-                                displaySize="L"
-                                class="sapUiSmallMarginEnd sapUiSmallMarginTop"/>                
-                            <VBox>
-                                <!-- Degree as Header -->
-                                <Title text="{resume>degree}" level="H3" class="sapUiTinyMarginBottom"/>
+                    showSeparators="Inner"
+                    class="educationList">
+                    <CustomListItem class="educationListItem">
+                        <FlexBox direction="Row" alignItems="Start" class="educationFlexBox">
+                            <!-- Left: Logo Container -->
+                            <FlexBox direction="Column" alignItems="Center" justifyContent="Center" class="logoContainer">
+                                <f:Avatar
+                                    src="Images/{resume>key}.jpg"
+                                    displayShape="Square"
+                                    displaySize="L"
+                                    class="educationLogo"/>
+                            </FlexBox>
+                            
+                            <!-- Right: Details Container -->
+                            <FlexBox direction="Column" alignItems="Start" justifyContent="Start" class="detailsContainer">
+                                <!-- Degree -->
+                                <Title text="{resume>degree}" level="H3" class="degreeTitle" wrapping="true"/>
                                 
-                                <!-- Institution and Year as Subheader -->
+                                <!-- Institution and Year -->
                                 <ObjectStatus
                                     title="{resume>institution}"
                                     text="{resume>year}"
-                                    class="sapUiTinyMarginBottom"/>
+                                    class="institutionStatus"/>
                                 
-                                <!-- Location with Icon -->
-                                <HBox alignItems="Center" class="sapUiTinyMarginBottom">
-                                    <core:Icon src="sap-icon://map" class="sapUiTinyMarginEnd"/>
-                                    <Text text="{resume>location}"/>
+                                <!-- Location -->
+                                <HBox alignItems="Center" class="locationContainer">
+                                    <core:Icon src="sap-icon://map" class="sapUiTinyMarginEnd locationIcon"/>
+                                    <Text text="{resume>location}" wrapping="true" class="locationText"/>
                                 </HBox>
-                            </VBox>
-                        </HBox>
+                            </FlexBox>
+                        </FlexBox>
                     </CustomListItem>
                 </List>
             </VBox>

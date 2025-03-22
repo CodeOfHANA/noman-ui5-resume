@@ -57,42 +57,44 @@
                 selectedKey="{appView>/selectedKey}"
                 itemSelect=".onItemSelect">
                 <tnt:item>
-                    <tnt:NavigationList>
+                    <tnt:NavigationList
+                        id="navigationList">
                         <tnt:NavigationListItem
                             key="summary"
-                            text="{i18n>navSummary}"
+                            text="{= ${appView>/showIconsOnly} ? '' : ${i18n>navSummary}}"
                             icon="sap-icon://employee"/>
                         <tnt:NavigationListItem
                             key="experience"
-                            text="{i18n>navExperience}"
+                            text="{= ${appView>/showIconsOnly} ? '' : ${i18n>navExperience}}"
                             icon="sap-icon://activity-2"/>
                         <tnt:NavigationListItem
                             key="skills"
-                            text="{i18n>navSkills}"
+                            text="{= ${appView>/showIconsOnly} ? '' : ${i18n>navSkills}}"
                             icon="sap-icon://technical-object"/>
                         <tnt:NavigationListItem
                             key="education"
-                            text="{i18n>navEducation}"
+                            text="{= ${appView>/showIconsOnly} ? '' : ${i18n>navEducation}}"
                             icon="sap-icon://education"/>
                         <tnt:NavigationListItem
                             key="certifications"
-                            text="{i18n>navCertifications}"
+                            text="{= ${appView>/showIconsOnly} ? '' : ${i18n>navCertifications}}"
                             icon="sap-icon://badge"/>
                     </tnt:NavigationList>
                 </tnt:item>
                 <tnt:footer>
-                    <tnt:NavigationList>
+                    <tnt:NavigationList
+                        id="footerNavigationList">
                         <tnt:NavigationListItem
                             key="toggle"
-                            text="{i18n>navToggleTheme}"
+                            text="{= ${appView>/showIconsOnly} ? '' : ${i18n>navToggleTheme}}"
                             icon="sap-icon://palette"/>
                         <tnt:NavigationListItem
                             key="contact"
-                            text="{i18n>navContact}"
+                            text="{= ${appView>/showIconsOnly} ? '' : ${i18n>navContact}}"
                             icon="sap-icon://email"/>
                         <tnt:NavigationListItem
                             key="download"
-                            text="{i18n>navDownloadResume}"
+                            text="{= ${appView>/showIconsOnly} ? '' : ${i18n>navDownloadResume}}"
                             icon="sap-icon://download"/>
                     </tnt:NavigationList>
                 </tnt:footer>

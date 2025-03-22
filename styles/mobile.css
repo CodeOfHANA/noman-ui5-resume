@@ -1,0 +1,684 @@
+/* Mobile Specific Adjustments */
+@media (max-width: 600px) {
+    /* Global adjustments */
+    .sapMPage {
+        padding: 0 !important;
+    }
+    
+    /* Fix padding and margins for mobile */
+    .sapUiSmallMargin, 
+    .sapUiMediumMargin {
+        padding: 0.5rem !important;
+        margin: 0.5rem !important;
+    }
+    
+    /* Top section profile and contact info in Summary view */
+    .sapUiSmallMarginBottom > .sapUiSmallMarginEnd,
+    .sapUiSmallMarginBottom > .sapUiSmallMarginBegin {
+        width: 100% !important;
+        margin: 0 0 1rem 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Make top profile section stack on mobile */
+    .sapMHBox.sapUiSmallMarginBottom {
+        flex-direction: column !important;
+    }
+    
+    /* Fix avatar centering on mobile */
+    .sapUiSmallMarginEnd[alignItems="Center"] {
+        align-items: center !important;
+        justify-content: center !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Adjust icons in mobile view */
+    .techIconsContainer {
+        justify-content: center !important;
+    }
+    
+    .techIcon {
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0.25rem !important;
+    }
+    
+    /* Make skills list items more compact on mobile */
+    .sapMListItems .sapMLIB {
+        padding: 0.5rem 1rem !important;
+    }
+    
+    /* Adjust font sizes for better mobile reading */
+    .sapMTitle {
+        font-size: 1.25rem !important;
+    }
+    
+    .sapMTitleStyleH3 {
+        font-size: 1.1rem !important;
+    }
+    
+    .sapMText, 
+    .sapMLabel, 
+    .sapMObjectStatus {
+        font-size: 0.875rem !important;
+    }
+
+    /* ---------- EXPERIENCE VIEW FIXES ---------- */
+    
+    /* Experience Panel fixes */
+    .linkedInStyle {
+        width: 100% !important;
+    }
+
+    /* Fix panel header text getting cut off */
+    .linkedInStyle .sapMPanelHdr,
+    .linkedInStyle .sapMTitle,
+    .linkedInStyle .sapMObjectStatusTitle,
+    .linkedInStyle .sapMObjectStatusText,
+    .linkedInStyle .sapMLabel {
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+    }
+    
+    /* Make sure company logo doesn't squeeze other content */
+    .sapFAvatar {
+        min-width: 3rem !important;
+        min-height: 3rem !important;
+        margin-right: 0.5rem !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Ensure overflow content is visible */
+    .sapMPanelContent {
+        overflow: visible !important;
+    }
+    
+    /* Ensure the title and content sections fit properly */
+    .sapMPanel .sapMPanelWrappingDiv,
+    .sapMPanel .sapMPanelContent {
+        width: 100% !important;
+    }
+    
+    /* Make project panels stack better */
+    .subPanel {
+        width: 100% !important;
+        margin: 0.25rem 0 !important;
+    }
+    
+    /* Give more space to the role and company info */
+    .roleInfoSection {
+        width: 100% !important;
+        padding-right: 0.5rem !important;
+        word-break: break-word !important;
+    }
+    
+    /* Fix header overflow toolbar */
+    .sapMOTB {
+        height: auto !important;
+        flex-wrap: wrap !important;
+    }
+    
+    /* Fix HBox wrapping in panel headers */
+    .sapMPanelHdr .sapMFlexBox,
+    .experienceHeader,
+    .companyInfoSection {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+    
+    /* Ensure text doesn't overflow in panel headers */
+    .sapMTitle.sapMTitleStyleH3,
+    .sapMTitle.sapMTitleStyleH4 {
+        max-width: 100% !important;
+        white-space: normal !important;
+    }
+    
+    /* Ensure client name is fully visible */
+    .subPanel .sapMTitleStyleH4 {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        width: 100% !important;
+    }
+
+    /* About me text should be more compact on mobile */
+    .sapMFT {
+        font-size: 0.875rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* More compact navigation */
+    .sapTntToolHeader.sapMTB {
+        height: 2.5rem !important;
+    }
+    
+    /* Shellbar adjustments */
+    .sapFShellBar {
+        height: auto !important;
+        padding: 0 0.5rem !important;
+    }
+    
+    .sapFShellBarTitleContainer {
+        margin-left: 0.5rem !important;
+    }
+    
+    /* Overflow toolbar fix - ensure it doesn't cut off content */
+    .sapMOTB {
+        height: auto !important;
+        padding: 0.25rem !important;
+    }
+    
+    /* Projects section fixes */
+    .sapUiMediumMarginBegin {
+        margin-left: 0.5rem !important;
+    }
+    
+    /* Fix for any nested list items that might get compressed */
+    .sapMListItems .sapMListItems .sapMLIB {
+        padding: 0.25rem !important;
+    }
+    
+    /* ---------- EDUCATION VIEW MOBILE FIXES ---------- */
+    .educationFlexBox {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 1rem 0.5rem !important;
+    }
+    
+    .logoContainer {
+        margin-right: 0 !important;
+        margin-bottom: 1rem !important;
+        width: 100% !important;
+    }
+    
+    .detailsContainer {
+        width: 100% !important;
+        align-items: center !important;
+        padding-top: 0 !important;
+    }
+    
+    .degreeTitle {
+        text-align: center !important;
+    }
+    
+    .institutionStatus {
+        justify-content: center !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .institutionStatus .sapMObjectStatusTitle,
+    .institutionStatus .sapMObjectStatusText {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .locationContainer {
+        justify-content: center !important;
+    }
+    
+    .educationLogo {
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+    
+    /* ---------- CERTIFICATIONS VIEW MOBILE FIXES ---------- */
+    /* Make certification tiles responsive */
+    .sapMGenericTile {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0.5rem auto !important;
+    }
+    
+    /* Fix certification details list items */
+    .sapMList .sapMLIB {
+        padding: 0 !important;
+        border-left: none !important;
+    }
+    
+    /* Remove the yellow vertical line that appears on the left side */
+    .sapMListItems:before,
+    .sapMListItems::before {
+        display: none !important;
+    }
+    
+    /* Improve HBox layout for certification items */
+    .sapMCustomLI .sapMHBox {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        padding: 0.5rem !important;
+    }
+    
+    /* Left-align images in certification list */
+    .sapMCustomLI .sapMHBox .sapMImage {
+        float: left !important;
+        margin: 0 0.5rem 0 0 !important;
+        width: auto !important;
+        height: auto !important;
+        max-height: 3rem !important;
+        max-width: 4rem !important;
+    }
+    
+    /* Fix certification text container */
+    .sapMCustomLI .sapMHBox .sapMVBox {
+        width: calc(100% - 5rem) !important;
+        text-align: left !important;
+        float: left !important;
+    }
+    
+    /* Ensure certification titles wrap properly */
+    .sapMCustomLI .sapMTitle {
+        width: 100% !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        text-align: left !important;
+    }
+    
+    /* Left-align certification issued date */
+    .sapMCustomLI .sapMHBox .sapMHBox {
+        justify-content: flex-start !important;
+        width: 100% !important;
+    }
+    
+    /* Left-align link */
+    .sapMCustomLI .sapMLnk {
+        text-align: left !important;
+        width: auto !important;
+        margin-top: 0.5rem !important;
+    }
+    
+    /* Clear floats */
+    .sapMCustomLI .sapMHBox:after {
+        content: "" !important;
+        display: table !important;
+        clear: both !important;
+    }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Fix experiences wrapping on tablets */
+    .linkedInStyle .sapMPanelHdr,
+    .linkedInStyle .sapMTitle,
+    .linkedInStyle .sapMObjectStatusTitle,
+    .linkedInStyle .sapMObjectStatusText,
+    .linkedInStyle .sapMLabel {
+        white-space: normal !important;
+    }
+    
+    /* Adjust icon size for tablets */
+    .techIcon {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    /* Two columns for certification tiles on tablets */
+    .sapMGenericTile {
+        width: 45% !important;
+    }
+    
+    /* Education tablet adjustments */
+    .educationFlexBox {
+        padding: 1rem 0.5rem !important;
+    }
+    
+    .logoContainer {
+        margin-right: 1rem !important;
+    }
+    
+    .educationLogo {
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+}
+
+/* Additional fixes for very small screens */
+@media (max-width: 380px) {
+    /* Even smaller icons on very small screens */
+    .techIcon {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    /* Smaller margins */
+    .sapUiSmallMargin {
+        margin: 0.25rem !important;
+    }
+    
+    /* Smaller avatar */
+    .sapFAvatarXL {
+        width: 5rem !important;
+        height: 5rem !important;
+        font-size: 2.5rem !important;
+    }
+    
+    /* Further reduce padding in panels */
+    .sapMPanelContent {
+        padding: 0.25rem 0.5rem !important;
+    }
+}
+
+/* LinkedIn Style Experience View */
+.linkedInExpView {
+    background-color: #fff;
+}
+
+.experienceList {
+    background-color: transparent;
+}
+
+.experienceListItem {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 0.5rem;
+}
+
+.linkedInExpItem {
+    width: 100%;
+}
+
+.companyLogo {
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.experienceContent {
+    padding-right: 0.5rem;
+}
+
+.roleTitle {
+    font-weight: 600;
+    font-size: 1.1rem !important;
+    color: #000;
+    margin-top: 0.25rem;
+}
+
+.companyName {
+    font-size: 0.95rem !important;
+    color: #333;
+}
+
+.periodText {
+    font-size: 0.85rem !important;
+    color: #666;
+}
+
+.locationInfo {
+    font-size: 0.85rem !important;
+    color: #666;
+}
+
+.locationIcon {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.expandButton {
+    width: auto;
+    padding-left: 0;
+    color: #0073b1;
+    margin-top: 0.5rem;
+}
+
+.expandButton .sapMBtnInner {
+    border: none;
+    background: transparent;
+}
+
+.projectsContainer {
+    border-left: 2px solid #eee;
+    margin-left: 0.5rem;
+    padding-left: 1rem;
+}
+
+.projectsList {
+    background-color: transparent;
+}
+
+.projectItem {
+    background-color: transparent;
+    padding: 0.5rem 0;
+}
+
+.projectTitle {
+    font-size: 1rem !important;
+    color: #333;
+}
+
+.responsibilitiesList {
+    background-color: transparent;
+}
+
+.responsibilityItem {
+    margin-bottom: 0.25rem;
+}
+
+.bulletIcon {
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.responsibilityText {
+    font-size: 0.9rem !important;
+    color: #333;
+}
+
+/* Mobile Adjustments for LinkedIn Style */
+@media (max-width: 600px) {
+    .experienceListItem {
+        padding: 0.75rem 0.25rem;
+    }
+    
+    .roleTitle {
+        font-size: 1rem !important;
+    }
+    
+    .companyName, .periodText, .locationInfo {
+        font-size: 0.8rem !important;
+    }
+    
+    .projectsContainer {
+        margin-left: 0.25rem;
+        padding-left: 0.5rem;
+    }
+    
+    .projectTitle {
+        font-size: 0.9rem !important;
+    }
+    
+    .responsibilityText {
+        font-size: 0.8rem !important;
+    }
+    
+    .companyLogo {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        margin-right: 0.5rem !important;
+    }
+    
+    .expandButton {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* ---------- EDUCATION VIEW DESKTOP STYLES ---------- */
+.educationContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.educationList {
+    background-color: transparent;
+}
+
+.educationListItem {
+    padding: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.educationFlexBox {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.logoContainer {
+    flex: 0 0 auto;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.educationLogo {
+    width: 6rem !important;
+    height: 6rem !important;
+}
+
+.detailsContainer {
+    flex: 1 1 auto;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.degreeTitle {
+    font-size: 1.2rem !important;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.institutionStatus {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem;
+}
+
+.institutionStatus .sapMObjectStatusTitle {
+    font-weight: 500;
+}
+
+.locationContainer {
+    color: #666;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.locationIcon {
+    color: #666;
+}
+
+/* ---------- SUMMARY VIEW TEXT SPACING FIXES ---------- */
+.aboutMeText {
+    text-align: left !important;
+    line-height: 1.5 !important;
+    word-spacing: normal !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.aboutMeText p {
+    margin-bottom: 0.75rem !important;
+}
+
+.aboutMeText strong {
+    font-weight: 600 !important;
+}
+
+.summaryList {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.summaryList .sapMListItems .sapMLIB {
+    padding-left: 0 !important;
+}
+
+/* Fix margin on professional summary bullet points */
+.sapUiTinyMarginBegin {
+    margin-left: 0 !important;
+}
+
+/* Fix any parent containers that might be adding margin */
+#summaryPage .sapMFlexItem {
+    margin-left: 0 !important;
+}
+
+/* Fix for all text in the About Me section */
+#summaryPage .sapUiSmallMarginBottom {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Ensure About Me section gets full width */
+#summaryPage .sapMVBox.sapMFlexItem {
+    width: 100% !important;
+}
+
+@media (max-width: 600px) {
+    .aboutMeText {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Icon alignment on mobile */
+    #summaryPage .sapMHBox {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+}
+
+/* Navigation menu adjustments for mobile */
+@media (max-width: 600px) {
+    /* Apply to navigation list items when showing only icons */
+    .sapTntNavLIItem {
+        padding: 0.5rem 0.25rem !important;
+    }
+    
+    /* Center icons when text is hidden */
+    .sapTntNavLIItem .sapTntNavLIGroupIcon {
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Make the side navigation narrower on mobile */
+    .mobileNav.sapTntSideNavigation {
+        width: 3rem !important;
+    }
+    
+    /* Adjust the main content when side nav is open */
+    .sapTntToolPageSideExpanded .sapTntToolPageMain {
+        transform: translateX(3rem) !important;
+    }
+    
+    /* Increase icon size for better visibility */
+    .sapTntNavLIItem .sapUiIcon {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Hide text visually but keep for accessibility */
+    .sapTntNavLIText {
+        width: 0 !important;
+        overflow: hidden !important;
+        opacity: 0 !important;
+    }
+    
+    /* Add some spacing for readability */
+    .sapTntNavLIItem {
+        margin: 0.25rem 0 !important;
+    }
+    
+    /* Make the separators less prominent */
+    .sapTntSideNavigationSeparator {
+        margin: 0.25rem 0.5rem !important;
+    }
+}

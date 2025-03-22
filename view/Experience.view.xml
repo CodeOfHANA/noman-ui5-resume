@@ -10,72 +10,85 @@
         <f:title>
             <f:DynamicPageTitle>
                 <f:heading>
-                    <Title text="Professional Experience" level="H2"/>
+                    <Title text="{i18n>experienceTitle}" level="H2"/>
                 </f:heading>
             </f:DynamicPageTitle>
         </f:title>
         
         <f:content>
-            <VBox class="sapUiMediumMargin">
+            <VBox class="sapUiSmallMargin linkedInExpView">
                 <List
                     items="{resume>/experience}"
-                    showSeparators="None">
-                    <CustomListItem class="sapUiMediumMarginBottom">
-                        <Panel expandable="true" expanded="false" class="linkedInStyle">
-                            <headerToolbar>
-                                <OverflowToolbar height="auto" style="Clear">
-                                    <HBox alignItems="Start" justifyContent="SpaceBetween" width="100%" wrap="Wrap">
-                                        <HBox alignItems="Start">
-                                            <f:Avatar
-                                                src="Images/{resume>key}.jpg"
-                                                displayShape="Square"
-                                                displaySize="M"
-                                                class="sapUiSmallMarginEnd"/>
-                                            <VBox class="sapUiSmallMarginBegin" width="100%">
-                                                <Title text="{resume>role}" level="H3" wrapping="true"/>
-                                                <ObjectStatus 
-                                                    title="{resume>company}"
-                                                    text="{resume>period}"
-                                                    class="sapUiTinyMarginTop"/>
-                                                <Label text="{resume>location}" class="sapUiTinyMarginTop"/>
-                                            </VBox>
-                                        </HBox>
-                                    </HBox>
-                                </OverflowToolbar>
-                            </headerToolbar>
-                            <content>
-                                <!-- Projects Header -->
-                                <Title text="Projects" level="H3" class="sapUiMediumMarginBegin"/>
-
-                                <List
-                                    items="{resume>projects}"
-                                    showSeparators="Inner"
-                                    class="sapUiTinyMarginTop">
-                                    <CustomListItem>
-                                        <Panel expandable="true" expanded="false" class="subPanel">
-                                            <headerToolbar>
-                                                <Toolbar style="Clear">
-                                                    <Title text="{resume>client}" level="H4" wrapping="true"/>
-                                                </Toolbar>
-                                            </headerToolbar>
-                                            <content>
+                    showSeparators="Inner"
+                    class="experienceList">
+                    <CustomListItem class="experienceListItem">
+                        <FlexBox direction="Row" alignItems="Start" class="linkedInExpItem">
+                            <!-- Company Logo -->
+                            <f:Avatar
+                                src="Images/{resume>key}.jpg"
+                                displayShape="Square"
+                                displaySize="M"
+                                class="sapUiSmallMarginEnd sapUiTinyMarginTop companyLogo"/>
+                                
+                            <!-- Experience Info -->
+                            <FlexBox direction="Column" width="100%" class="experienceContent sapUiTinyMarginTop">
+                                <!-- Role -->
+                                <Title text="{resume>role}" level="H3" wrapping="true" class="roleTitle"/>
+                                
+                                <!-- Company -->
+                                <Text text="{resume>company}" class="sapUiTinyMarginTop companyName"/>
+                                
+                                <!-- Period -->
+                                <Text text="{resume>period}" class="sapUiTinyMarginTop periodText"/>
+                                
+                                <!-- Location -->
+                                <FlexBox alignItems="Center" class="sapUiTinyMarginTop locationInfo">
+                                    <core:Icon src="sap-icon://map" class="sapUiTinyMarginEnd locationIcon"/>
+                                    <Text text="{resume>location}" wrapping="true" class="locationText"/>
+                                </FlexBox>
+                                
+                                <!-- Expand Button for Projects & Responsibilities -->
+                                <Button 
+                                    icon="sap-icon://slim-arrow-down" 
+                                    press="onExpandExperience" 
+                                    text="Show Projects"
+                                    class="sapUiTinyMarginTop expandButton"
+                                    tooltip="Show Projects and Responsibilities"
+                                    type="Transparent"
+                                    visible="{= ${resume>projects}.length > 0}">
+                                </Button>
+                                    
+                                <!-- Projects Container (Initially Hidden) -->
+                                <VBox 
+                                      visible="false" 
+                                      class="projectsContainer sapUiSmallMarginTop">
+                                    <List
+                                        items="{resume>projects}"
+                                        showSeparators="Inner"
+                                        class="projectsList">
+                                        <CustomListItem class="projectItem">
+                                            <VBox class="projectContent">
+                                                <!-- Project Name -->
+                                                <Title text="{resume>client}" level="H4" wrapping="true" class="projectTitle"/>
+                                                
+                                                <!-- Project Responsibilities -->
                                                 <List
                                                     items="{resume>responsibilities}"
                                                     showSeparators="None"
-                                                    class="sapUiSmallMarginTop">
+                                                    class="responsibilitiesList sapUiTinyMarginTop">
                                                     <CustomListItem>
-                                                        <HBox alignItems="Start" class="sapUiTinyMarginBottom">
-                                                            <core:Icon src="sap-icon://bullet-text" class="sapUiTinyMarginEnd sapUiTinyMarginTop"/>
-                                                            <Text text="{resume>}" wrapping="true"/>
-                                                        </HBox>
+                                                        <FlexBox alignItems="Start" class="responsibilityItem">
+                                                            <core:Icon src="sap-icon://bullet-text" class="sapUiSmallMarginEnd bulletIcon"/>
+                                                            <Text text="{resume>}" wrapping="true" class="responsibilityText"/>
+                                                        </FlexBox>
                                                     </CustomListItem>
                                                 </List>
-                                            </content>
-                                        </Panel>
-                                    </CustomListItem>
-                                </List>
-                            </content>
-                        </Panel>
+                                            </VBox>
+                                        </CustomListItem>
+                                    </List>
+                                </VBox>
+                            </FlexBox>
+                        </FlexBox>
                     </CustomListItem>
                 </List>
             </VBox>

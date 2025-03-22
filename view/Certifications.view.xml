@@ -22,9 +22,10 @@
                 <FlexBox
                     wrap="Wrap"
                     justifyContent="SpaceAround"
-                    items="{resume>/certifications}">
+                    items="{resume>/certifications}"
+                    class="certTileContainer">
                     <GenericTile
-                        class="sapUiMediumMargin"
+                        class="sapUiMediumMargin certTile"
                         header="{resume>name}"
                         subheader="{= 'Issued: ' + ${resume>issueDate} || ''}"
                         frameType="OneByOne"
@@ -44,28 +45,28 @@
                 <List
                     items="{resume>/certifications}"
                     showSeparators="Inner"
-                    class="sapUiMediumMarginBottom">
-                    <CustomListItem press=".onCertificatePress" type="Active">
+                    class="sapUiMediumMarginBottom certDetailsList">
+                    <CustomListItem press=".onCertificatePress" type="Active" class="certDetailsItem">
                         <customData>
                             <core:CustomData key="link" value="{resume>link}" />
                         </customData>
-                        <HBox alignItems="Center" class="sapUiSmallMarginBegin sapUiSmallMarginEnd sapUiSmallMarginTop sapUiSmallMarginBottom">
+                        <HBox alignItems="Center" class="sapUiSmallMarginBegin sapUiSmallMarginEnd sapUiSmallMarginTop sapUiSmallMarginBottom certDetailsBox">
                             <Image 
                                 src="Images/{resume>logo}" 
                                 width="4rem"
                                 height="3rem"
-                                class="sapUiMediumMarginEnd"/>
-                            <VBox>
-                                <Title text="{resume>name}" level="H4" class="sapUiTinyMarginBottom"/>
-                                <HBox>
+                                class="sapUiMediumMarginEnd certLogo"/>
+                            <VBox class="certInfoContainer">
+                                <Title text="{resume>name}" level="H4" class="sapUiTinyMarginBottom certTitle" wrapping="true"/>
+                                <HBox alignItems="Center" class="issuedDateContainer">
                                     <core:Icon src="sap-icon://calendar" class="sapUiTinyMarginEnd"/>
-                                    <Text text="{= 'Issued: ' + ${resume>issueDate} || 'Current'}" class="sapUiTinyMarginEnd"/>
+                                    <Text text="{= 'Issued: ' + ${resume>issueDate} || 'Current'}" class="sapUiTinyMarginEnd issuedDate"/>
                                 </HBox>
                                 <Link 
                                     text="View Certificate" 
                                     href="{resume>link}" 
                                     target="_blank" 
-                                    class="sapUiTinyMarginTop"/>
+                                    class="sapUiTinyMarginTop viewCertLink"/>
                             </VBox>
                         </HBox>
                     </CustomListItem>

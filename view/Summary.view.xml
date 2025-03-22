@@ -75,7 +75,7 @@
                                         path: 'resume>/about_me',
                                         formatter: '.formatBoldText'
                                     }"
-                            class="sapUiSmallMarginBottom sapUiMediumMarginBegin"
+                            class="sapUiSmallMarginBottom aboutMeText"
                             width="100%"/>
                     
                     <HBox alignItems="Center" class="sapUiTinyMarginBottom">
@@ -85,7 +85,7 @@
                     <List
                         items="{resume>/summary}"
                         showSeparators="Inner"
-                        class="sapUiTinyMarginBegin">
+                        class="summaryList">
                         <CustomListItem>
                             <HBox>
                                 <core:Icon src="sap-icon://bullet-text" class="sapUiSmallMarginEnd"/>
