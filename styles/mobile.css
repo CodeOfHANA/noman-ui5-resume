@@ -299,6 +299,57 @@
         display: table !important;
         clear: both !important;
     }
+    
+    /* ---------- NAVIGATION FIXES FOR MOBILE ---------- */
+    /* Ensure side navigation is always narrow, even when expanded */
+    .sapTntSideNavigation,
+    .sapTntToolPage .sapTntSideNavigation,
+    .sapTntToolPageSideExpanded .sapTntSideNavigation {
+        width: 3rem !important;
+        min-width: 3rem !important;
+        max-width: 3rem !important;
+    }
+    
+    /* Ensure main content shifts properly when side nav is expanded */
+    .sapTntToolPageSideExpanded .sapTntToolPageMain {
+        transform: translateX(3rem) !important;
+    }
+    
+    /* Force side navigation list items to be icon-only */
+    .sapTntToolPage .sapTntSideNavigation .sapTntNavLIText {
+        width: 0 !important; 
+        opacity: 0 !important;
+        overflow: hidden !important;
+        display: none !important;
+    }
+    
+    /* Center the icons in the side navigation */
+    .sapTntToolPage .sapTntSideNavigation .sapTntNavLI {
+        justify-content: center !important;
+    }
+    
+    .sapTntToolPage .sapTntSideNavigation .sapTntNavLIItem {
+        justify-content: center !important;
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    /* Ensure the icons are properly centered */
+    .sapTntToolPage .sapTntSideNavigation .sapTntNavLIGroup {
+        width: 3rem !important;
+        justify-content: center !important;
+    }
+    
+    .sapTntToolPage .sapTntSideNavigation .sapTntNavLIGroupIcon {
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    /* Make the icons a bit bigger for better tappability */
+    .sapTntToolPage .sapTntSideNavigation .sapUiIcon {
+        font-size: 1.25rem !important;
+    }
 }
 
 /* Tablet Optimizations */
@@ -634,51 +685,5 @@
     #summaryPage .sapMHBox {
         padding-left: 0 !important;
         margin-left: 0 !important;
-    }
-}
-
-/* Navigation menu adjustments for mobile */
-@media (max-width: 600px) {
-    /* Apply to navigation list items when showing only icons */
-    .sapTntNavLIItem {
-        padding: 0.5rem 0.25rem !important;
-    }
-    
-    /* Center icons when text is hidden */
-    .sapTntNavLIItem .sapTntNavLIGroupIcon {
-        padding-right: 0 !important;
-        margin-right: 0 !important;
-    }
-    
-    /* Make the side navigation narrower on mobile */
-    .mobileNav.sapTntSideNavigation {
-        width: 3rem !important;
-    }
-    
-    /* Adjust the main content when side nav is open */
-    .sapTntToolPageSideExpanded .sapTntToolPageMain {
-        transform: translateX(3rem) !important;
-    }
-    
-    /* Increase icon size for better visibility */
-    .sapTntNavLIItem .sapUiIcon {
-        font-size: 1.25rem !important;
-    }
-    
-    /* Hide text visually but keep for accessibility */
-    .sapTntNavLIText {
-        width: 0 !important;
-        overflow: hidden !important;
-        opacity: 0 !important;
-    }
-    
-    /* Add some spacing for readability */
-    .sapTntNavLIItem {
-        margin: 0.25rem 0 !important;
-    }
-    
-    /* Make the separators less prominent */
-    .sapTntSideNavigationSeparator {
-        margin: 0.25rem 0.5rem !important;
     }
 }
