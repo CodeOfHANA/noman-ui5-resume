@@ -178,7 +178,7 @@ sap.ui.define([
         _handleDownload: function() {
             // Check if we're on a mobile device
             var isMobile = Device.system.phone;
-            var sResumeUrl = "docs/noman_resume.docx";
+            var sResumeUrl = "docs/noman_resume.pdf";
             
             if (isMobile) {
                 // On mobile, we can't trigger download so easily, so open in new tab
@@ -187,7 +187,7 @@ sap.ui.define([
                 // On desktop, use the download attribute
                 var link = document.createElement('a');
                 link.href = sResumeUrl;
-                link.download = "Noman_Hanif_Resume.docx"; 
+                link.download = "Noman_Hanif_Resume.pdf"; 
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
