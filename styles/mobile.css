@@ -35,12 +35,17 @@
     /* Adjust icons in mobile view */
     .techIconsContainer {
         justify-content: center !important;
+        gap: 1rem !important;
+        padding: 0.5rem !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        justify-items: center !important;
     }
     
     .techIcon {
-        width: 50px !important;
-        height: 50px !important;
-        margin: 0.25rem !important;
+        width: 60px !important;
+        height: 60px !important;
+        margin: 0.5rem !important;
     }
     
     /* Make skills list items more compact on mobile */
@@ -350,6 +355,22 @@
     .sapTntToolPage .sapTntSideNavigation .sapUiIcon {
         font-size: 1.25rem !important;
     }
+    
+    /* Skills panels in mobile */
+    .skillsPanel .sapMPanelHdr {
+        padding: 0.75rem 1rem !important;
+        font-weight: 500 !important;
+        font-size: 1rem !important;
+        color: #333 !important;
+        background-color: #f5f5f5 !important;
+        white-space: normal !important;
+        text-overflow: clip !important;
+        overflow: visible !important;
+        width: auto !important;
+        max-width: none !important;
+        line-height: 1.4 !important;
+        display: block !important;
+    }
 }
 
 /* Tablet Optimizations */
@@ -387,6 +408,14 @@
         width: 5rem !important;
         height: 5rem !important;
     }
+    
+    /* Tech icons for tablet */
+    .techIconsContainer {
+        gap: 1.5rem !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
 }
 
 /* Additional fixes for very small screens */
@@ -412,6 +441,11 @@
     /* Further reduce padding in panels */
     .sapMPanelContent {
         padding: 0.25rem 0.5rem !important;
+    }
+    
+    /* Smaller tech icons containers */
+    .techIconsContainer {
+        gap: 0.5rem !important;
     }
 }
 
@@ -685,5 +719,206 @@
     #summaryPage .sapMHBox {
         padding-left: 0 !important;
         margin-left: 0 !important;
+    }
+}
+
+/* --------- SKILLS VIEW ENHANCEMENTS --------- */
+
+/* Panel styling for both light and dark themes */
+.skillsPanel {
+    margin-bottom: 1rem !important;
+    border-radius: 4px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+    overflow: visible !important;
+}
+
+/* Light theme panel headers */
+.sapUiTheme-sap_belize_plus .skillsPanel .sapMPanelHdr,
+.sapUiTheme-sap_fiori_3 .skillsPanel .sapMPanelHdr,
+.skillsPanel .sapMPanelHdr {
+    padding: 0.75rem 1rem !important;
+    font-weight: 500 !important;
+    font-size: 1.1rem !important;
+    color: #333 !important;
+    background-color: #f5f5f5 !important;
+    white-space: normal !important;
+    text-overflow: clip !important;
+    overflow: visible !important;
+    width: auto !important;
+    max-width: none !important;
+    line-height: 1.4 !important;
+    display: block !important;
+}
+
+/* Dark theme panel headers */
+.sapUiTheme-sap_fiori_3_dark .skillsPanel .sapMPanelHdr,
+.sapUiTheme-sap_hcb .skillsPanel .sapMPanelHdr {
+    padding: 0.75rem 1rem !important;
+    font-weight: 500 !important;
+    font-size: 1.1rem !important;
+    color: #f5f5f5 !important;
+    background-color: #2c3846 !important;
+    white-space: normal !important;
+    text-overflow: clip !important;
+    overflow: visible !important;
+    width: auto !important;
+    max-width: none !important;
+    line-height: 1.4 !important;
+    display: block !important;
+}
+
+.skillsPanel .sapMPanelExpandableIcon {
+    margin-right: 0.75rem !important;
+}
+
+/* Tech icons panel in light theme */
+.sapUiTheme-sap_belize_plus .techIconsPanel,
+.sapUiTheme-sap_fiori_3 .techIconsPanel,
+.techIconsPanel {
+    background-color: #f9f9f9 !important;
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+    margin-bottom: 1.5rem !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+    overflow: hidden !important;
+}
+
+/* Tech icons panel in dark theme */
+.sapUiTheme-sap_fiori_3_dark .techIconsPanel,
+.sapUiTheme-sap_hcb .techIconsPanel {
+    background-color: #1c2631 !important;
+    border-radius: 8px !important;
+    border: 1px solid #3f4f61 !important;
+    margin-bottom: 1.5rem !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+    overflow: hidden !important;
+}
+
+/* Tech section title in light theme */
+.sapUiTheme-sap_belize_plus .techSectionTitle,
+.sapUiTheme-sap_fiori_3 .techSectionTitle,
+.techSectionTitle {
+    font-size: 1.2rem !important;
+    color: #333 !important;
+    margin-top: 1rem !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+}
+
+/* Tech section title in dark theme */
+.sapUiTheme-sap_fiori_3_dark .techSectionTitle,
+.sapUiTheme-sap_hcb .techSectionTitle {
+    font-size: 1.2rem !important;
+    color: #f0f0f0 !important;
+    margin-top: 1rem !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+}
+
+.techIconsContainer {
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.techIcon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.1));
+    margin: 0;
+}
+
+/* Tech icons in dark theme */
+.sapUiTheme-sap_fiori_3_dark .techIcon,
+.sapUiTheme-sap_hcb .techIcon {
+    filter: drop-shadow(0px 2px 3px rgba(255,255,255,0.1)) !important;
+    background-color: rgba(255,255,255,0.1) !important;
+    border-radius: 8px !important;
+    padding: 4px !important;
+}
+
+/* Desktop hover effect */
+@media (min-width: 1025px) {
+    .techIcon:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.2));
+    }
+    
+    .sapUiTheme-sap_fiori_3_dark .techIcon:hover,
+    .sapUiTheme-sap_hcb .techIcon:hover {
+        transform: scale(1.1) !important;
+        filter: drop-shadow(0px 3px 5px rgba(255,255,255,0.2)) !important;
+        background-color: rgba(255,255,255,0.15) !important;
+    }
+}
+
+.skillsPanel .sapMPanelContent {
+    padding: 1rem !important;
+    overflow: visible !important;
+}
+
+/* Panel content in dark theme */
+.sapUiTheme-sap_fiori_3_dark .skillsPanel .sapMPanelContent,
+.sapUiTheme-sap_hcb .skillsPanel .sapMPanelContent {
+    background-color: #1c2631 !important;
+}
+
+/* Ensure panel headers display properly */
+#skillsPage-content .sapMPanel:nth-of-type(2) .sapMPanelHdr,
+#skillsPage-content .sapMPanel:nth-of-type(3) .sapMPanelHdr {
+    display: block !important;
+}
+
+/* Core competencies list in dark theme */
+.sapUiTheme-sap_fiori_3_dark .competencyBullet,
+.sapUiTheme-sap_hcb .competencyBullet {
+    color: #4db1ff !important;
+}
+
+/* Technical skills in dark theme */
+.sapUiTheme-sap_fiori_3_dark .skillItem,
+.sapUiTheme-sap_hcb .skillItem {
+    background-color: #2c3846 !important;
+    border-left: 3px solid #4db1ff !important;
+}
+
+.sapUiTheme-sap_fiori_3_dark .skillIcon,
+.sapUiTheme-sap_hcb .skillIcon {
+    color: #4db1ff !important;
+}
+
+/* Ensure all panels display properly in all themes */
+#skillsPage-content .sapMPanel .sapMPanelHdr {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Fix panel wrapping div in all themes */
+.sapMPanel .sapMPanelWrappingDiv {
+    width: 100% !important;
+}
+
+/* Desktop fixes */
+@media (min-width: 1025px) {
+    .skillsPanel .sapMPanelHdr {
+        padding: 1rem !important;
+        font-size: 1.2rem !important;
+    }
+    
+    .sapMPanelWrappingDiv,
+    .sapMPanelHdr {
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    .sapMPanel .sapMPanelWrappingDiv {
+        width: 100% !important;
     }
 }

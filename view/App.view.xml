@@ -33,6 +33,7 @@
                 
                 <f:profile>
                     <f:Avatar
+                        src="Images/profile.jpg"
                         initials="NMH"
                         displaySize="XL"
                         backgroundColor="Accent6"
