@@ -2,10 +2,10 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/UIComponent",
     "sap/ui/model/json/JSONModel",
-    "sap/ui/core/theming/Parameters",
+    "sap/ui/core/Theming",
     "sap/m/MessageToast",
     "sap/ui/Device"
-], function(Controller, UIComponent, JSONModel, Parameters, MessageToast, Device) {
+], function(Controller, UIComponent, JSONModel, Theming, MessageToast, Device) {
     "use strict";
 
     return Controller.extend("noman.resume.controller.App", {
@@ -16,7 +16,7 @@ sap.ui.define([
             // Create and set app view model for sidebar navigation
             var oViewModel = new JSONModel({
                 selectedKey: "summary",
-                currentTheme: sap.ui.getCore().getConfiguration().getTheme(),
+                currentTheme: Theming.getTheme(),
                 showIconsOnly: Device.system.phone // Set to true on mobile, false on desktop
             });
             this.getView().setModel(oViewModel, "appView");
@@ -146,21 +146,21 @@ sap.ui.define([
         
         _toggleTheme: function() {
             // Get current theme
-            var sCurrentTheme = sap.ui.getCore().getConfiguration().getTheme();
+            var sCurrentTheme = Theming.getTheme();
             var sNewTheme;
-            
+
             // Toggle between dark and light theme
-            if (sCurrentTheme === "sap_belize_plus") {
-                sNewTheme = "sap_fiori_3_dark";
-                MessageToast.show("Switching to High Contrast White");
+            if (sCurrentTheme === "sap_horizon_dark") {
+                sNewTheme = "sap_horizon";
+                MessageToast.show("Switching to Light Theme");
             } else {
-                sNewTheme = "sap_belize_plus";
-                MessageToast.show("Switching to Belize Deep");
+                sNewTheme = "sap_horizon_dark";
+                MessageToast.show("Switching to Dark Theme");
             }
-            
+
             // Apply new theme
-            sap.ui.getCore().applyTheme(sNewTheme);
-            
+            Theming.setTheme(sNewTheme);
+
             // Update theme in model
             this.getView().getModel("appView").setProperty("/currentTheme", sNewTheme);
         },

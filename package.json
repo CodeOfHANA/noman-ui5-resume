@@ -4,6 +4,7 @@
   "description": "Interactive Fiori-style resume application",
   "main": "index.js",
   "scripts": {
+    "start": "npx http-server . -p 8080 --cors -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
