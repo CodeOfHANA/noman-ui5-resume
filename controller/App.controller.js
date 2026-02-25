@@ -37,21 +37,19 @@ sap.ui.define([
          */
         _handleResponsiveLayout: function() {
             var oToolPage = this.byId("toolPage");
+            var oSideNavigation = this.byId("sideNavigation");
             var oAppViewModel = this.getView().getModel("appView");
-            
-            // On phones, collapse the side navigation by default
+
             if (Device.system.phone) {
-                oToolPage.setSideExpanded(false);
-                // Set to show only icons on mobile
+                // Keep sidebar visible but collapsed to icon-only mode
+                oToolPage.setSideExpanded(true);
+                oSideNavigation.setExpanded(false);
                 oAppViewModel.setProperty("/showIconsOnly", true);
-                
-                // Make the side navigation narrower on mobile
                 this._applySideNavMobileStyles(true);
             } else {
-                // Show text with icons on desktop
+                oToolPage.setSideExpanded(true);
+                oSideNavigation.setExpanded(true);
                 oAppViewModel.setProperty("/showIconsOnly", false);
-                
-                // Reset side navigation width for desktop
                 this._applySideNavMobileStyles(false);
             }
         },
@@ -106,17 +104,18 @@ sap.ui.define([
             // Navigate to the selected route
             this.getRouter().navTo(sKey);
             
-            // On mobile, collapse the side navigation after selection
+            // On mobile, collapse back to icon-only after selection
             if (Device.system.phone) {
-                this.byId("toolPage").setSideExpanded(false);
+                this.byId("sideNavigation").setExpanded(false);
+                this.getView().getModel("appView").setProperty("/showIconsOnly", true);
             }
         },
         
         onMenuButtonPressed: function() {
-            var oToolPage = this.byId("toolPage");
-            var bExpanded = !oToolPage.getSideExpanded();
+            var oSideNavigation = this.byId("sideNavigation");
+            var bExpanded = !oSideNavigation.getExpanded();
 
-            oToolPage.setSideExpanded(bExpanded);
+            oSideNavigation.setExpanded(bExpanded);
 
             // Hide text labels when collapsed to prevent vertical letter stacking
             this.getView().getModel("appView").setProperty("/showIconsOnly", !bExpanded);

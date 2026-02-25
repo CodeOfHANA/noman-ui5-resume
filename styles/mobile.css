@@ -306,65 +306,14 @@
     }
     
     /* ---------- NAVIGATION FIXES FOR MOBILE ---------- */
-    /* Ensure side navigation is always narrow, even when expanded */
-    .sapTntSideNavigation,
-    .sapTntToolPage .sapTntSideNavigation,
-    .sapTntToolPageSideExpanded .sapTntSideNavigation {
-        width: 3rem !important;
-        min-width: 3rem !important;
-        max-width: 3rem !important;
-    }
-
-    /* Make main nav list scrollable and top-aligned */
-    .sapTntSideNavigation .sapTntSideNavigationScrollContainer {
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
-    }
-
-    /* Ensure main content shifts properly when side nav is expanded */
-    .sapTntToolPageSideExpanded .sapTntToolPageMain {
-        transform: translateX(3rem) !important;
-    }
-
-    /* Force side navigation list items to be icon-only */
+    /* Hide text labels — icon-only mode handled via showIconsOnly model binding */
     .sapTntToolPage .sapTntSideNavigation .sapTntNavLIText {
         display: none !important;
     }
 
-    /* Stack all nav items (main + footer) tightly — no distribution gaps */
-    .sapTntToolPage .sapTntSideNavigation .sapTntNavLI,
-    .sapTntToolPage .sapTntSideNavigation .sapTntSideNavigationFooter .sapTntNavLI {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        height: auto !important;
-    }
-
-    /* Compact icon-only items for both main and footer nav */
-    .sapTntToolPage .sapTntSideNavigation .sapTntNavLIItem,
-    .sapTntToolPage .sapTntSideNavigation .sapTntNavLIGroup {
-        width: 3rem !important;
-        height: 3rem !important;
-        min-height: 3rem !important;
-        max-height: 3rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Center icons */
-    .sapTntToolPage .sapTntSideNavigation .sapTntNavLIGroupIcon {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* Icon size for tappability */
-    .sapTntToolPage .sapTntSideNavigation .sapUiIcon {
-        font-size: 1.25rem !important;
+    /* Make sidebar scrollable so all items (main + footer) are reachable */
+    .sapTntToolPage .sapTntSideNavigation {
+        overflow-y: auto !important;
     }
     
     /* Skills panels in mobile */
