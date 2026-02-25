@@ -320,50 +320,53 @@
         display: none !important;
     }
 
-    /* Make main nav list scrollable so all items are reachable */
-    .sapTntSideNavigation .sapTntSideNavigationScrollContainer,
-    .sapTntSideNavigation .sapTntNavLI {
+    /* Make main nav list scrollable and top-aligned */
+    .sapTntSideNavigation .sapTntSideNavigationScrollContainer {
         overflow-y: auto !important;
-        max-height: calc(100vh - 4rem) !important;
+        overflow-x: hidden !important;
     }
-    
+
     /* Ensure main content shifts properly when side nav is expanded */
     .sapTntToolPageSideExpanded .sapTntToolPageMain {
         transform: translateX(3rem) !important;
     }
-    
+
     /* Force side navigation list items to be icon-only */
     .sapTntToolPage .sapTntSideNavigation .sapTntNavLIText {
-        width: 0 !important; 
-        opacity: 0 !important;
-        overflow: hidden !important;
         display: none !important;
     }
-    
-    /* Center the icons in the side navigation */
+
+    /* Stack nav items tightly at the top — no distribution gaps */
     .sapTntToolPage .sapTntSideNavigation .sapTntNavLI {
-        justify-content: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        height: auto !important;
     }
-    
-    .sapTntToolPage .sapTntSideNavigation .sapTntNavLIItem {
-        justify-content: center !important;
-        text-align: center !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    
-    /* Ensure the icons are properly centered */
+
+    /* Compact icon-only items */
+    .sapTntToolPage .sapTntSideNavigation .sapTntNavLIItem,
     .sapTntToolPage .sapTntSideNavigation .sapTntNavLIGroup {
         width: 3rem !important;
+        height: 3rem !important;
+        min-height: 3rem !important;
+        max-height: 3rem !important;
+        display: flex !important;
+        align-items: center !important;
         justify-content: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
     }
-    
+
+    /* Center icons */
     .sapTntToolPage .sapTntSideNavigation .sapTntNavLIGroupIcon {
-        margin-right: 0 !important;
-        padding-right: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
-    
-    /* Make the icons a bit bigger for better tappability */
+
+    /* Icon size for tappability */
     .sapTntToolPage .sapTntSideNavigation .sapUiIcon {
         font-size: 1.25rem !important;
     }
