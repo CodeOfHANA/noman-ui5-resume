@@ -114,11 +114,12 @@ sap.ui.define([
         
         onMenuButtonPressed: function() {
             var oToolPage = this.byId("toolPage");
-            
-            // Simply toggle the side expanded state
-            oToolPage.setSideExpanded(!oToolPage.getSideExpanded());
-            
-            // No need to change the showIconsOnly property - keep it always true on mobile
+            var bExpanded = !oToolPage.getSideExpanded();
+
+            oToolPage.setSideExpanded(bExpanded);
+
+            // Hide text labels when collapsed to prevent vertical letter stacking
+            this.getView().getModel("appView").setProperty("/showIconsOnly", !bExpanded);
         },
         
         // Rest of your controller code remains the same
