@@ -314,6 +314,18 @@
         min-width: 3rem !important;
         max-width: 3rem !important;
     }
+
+    /* Hide footer nav items on mobile - toggle/contact/download are in ShellBar menu */
+    .sapTntSideNavigationFooter {
+        display: none !important;
+    }
+
+    /* Make main nav list scrollable so all items are reachable */
+    .sapTntSideNavigation .sapTntSideNavigationScrollContainer,
+    .sapTntSideNavigation .sapTntNavLI {
+        overflow-y: auto !important;
+        max-height: calc(100vh - 4rem) !important;
+    }
     
     /* Ensure main content shifts properly when side nav is expanded */
     .sapTntToolPageSideExpanded .sapTntToolPageMain {
